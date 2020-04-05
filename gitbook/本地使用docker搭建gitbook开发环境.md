@@ -1,6 +1,6 @@
 # 本地使用docker搭建gitbook开发环境
 
-[toc]
+
 
 ## 下载gitbook的docker镜像
 
@@ -154,21 +154,23 @@ $ git push -f
 
 ## 对外发布你的博客
 
+我们在本地书写好我们的博客之后，可以使用同一份文件，在两个地方很方便地发布自己的博客。
+
 ### 使用github发布
 
-GitHub Pages 是 GitHub 提供的静态网站托管服务。GitHub 上的每个仓库都可以拥有一个 GitHub Pages，对应的 URL 如下：
+>  GitHub Pages 是 GitHub 提供的静态网站托管服务。GitHub 上的每个仓库都可以拥有一个 GitHub Pages，对应的 URL 如下：
+>
+> ```bash
+> https://<username>.github.io/<repository>/
+> ```
+>
+> GitHub Pages 的静态资源支持下面 3 个来源：
+>
+> - master分支
+> - master分支的/docs目录
+> - gh-pages分支
 
-```bas
-https://<username>.github.io/<repository>/
-```
-
-GitHub Pages 的静态资源支持下面 3 个来源：
-
-- master分支
-- master分支的/docs目录
-- gh-pages分支
-
-这里我们使用./docs目录来存放静态网页。修改github仓库的配置，
+这里我们使用./docs目录来存放静态网页。
 
 ```bash
 # 本地构建静态网页
@@ -176,16 +178,42 @@ $ gitbook build ./ ./docs
 
 # 推送到远程服务器
 $ git push origin master
-
 ```
 
+修改github仓库的配置,选择 `master/branch /docs folder`。
 
+![image-20200405233733199](本地使用docker搭建gitbook开发环境.assets/image-20200405233733199.png)
 
+查看生成好的页面：https://zzw520.github.io/develop_experience/
 
 
 ### 使用gitbook发布
 
 [gitbook.com](https://www.gitbook.com)是官方提供的笔记托管的在线平台，我们可以选择将github的笔记项目同步到gitbook.com中。这样的好处是本地只需要推送到github中，就会自动更新到gitbook.com中。
+
+在gitbook创建space
+
+![image-20200405235041766](本地使用docker搭建gitbook开发环境.assets/image-20200405235041766.png)
+
+同步github的项目
+
+![image-20200405235140609](本地使用docker搭建gitbook开发环境.assets/image-20200405235140609.png)
+
+选择对应的项目
+
+![image-20200405235220409](本地使用docker搭建gitbook开发环境.assets/image-20200405235220409.png)
+
+执行以下命令：
+
+```bash
+# 本地构建静态网页
+$ gitbook build
+
+#推送到远程仓库
+$ git push origin master
+```
+
+
 
 
 
