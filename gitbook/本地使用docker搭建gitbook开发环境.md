@@ -168,10 +168,15 @@ GitHub Pages 的静态资源支持下面 3 个来源：
 - master分支的/docs目录
 - gh-pages分支
 
-这里我们使用./docs目录来存放静态网页。
+这里我们使用./docs目录来存放静态网页。修改github仓库的配置，
 
 ```bash
 # 本地构建静态网页
+$ gitbook build ./ ./docs
+
+# 推送到远程服务器
+$ git push origin master
+
 ```
 
 
