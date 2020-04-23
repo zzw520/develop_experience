@@ -66,7 +66,7 @@ $ docker run --rm -v "$PWD:/gitbook" -p 4000:4000 billryan/gitbook gitbook serve
 $ docker run --rm -v "$PWD:/gitbook" -p 4000:4000 billryan/gitbook gitbook build
 ```
 
-### 运行报错 TODO
+### 运行报错 
 
 ```bash
 Error: ENOENT: no such file or directory, stat '/gitbook/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js'
@@ -74,12 +74,25 @@ Error: ENOENT: no such file or directory, stat '/gitbook/docs/gitbook/gitbook-pl
 
 #### 错误原因
 
-是gitbook的一个bug(Version:3.2.3),解决方法如下，找到对应的文件，
+是gitbook的一个bug(Version:3.2.3),是偶发性的bug，解决方法如下，找到对应的文件，
 https://blog.csdn.net/weixin_44266650/article/details/89708421
 
-#### 修改后的dockerfile
+#### 解决方式
 
+1. 编写dockerfile
 
+```bash
+FROM billryan/gitbook:latest
+
+RUN cd /root/.gitbook/versions/3.2.3/lib/output/website/ && \
+    sed -i 's/confirm: true/confirm: false/g' copyPluginAssets.js
+```
+
+2. build 新的docker镜像
+
+```bash
+docker build -t zzw520/gitbook:latest ../gitbook
+```
 
 ### 修改.zshrc，创建别名
 
