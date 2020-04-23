@@ -176,7 +176,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x672C;&#x5730;&#x4F7F;&#x7528;docker&#x642D;&#x5EFA;gitbook&#x5F00;&#x53D1;&#x73AF;&#x5883;">&#x672C;&#x5730;&#x4F7F;&#x7528;docker&#x642D;&#x5EFA;gitbook&#x5F00;&#x53D1;&#x73AF;&#x5883;</h1>
-<p>[toc]</p>
 <h2 id="&#x4E0B;&#x8F7D;gitbook&#x7684;docker&#x955C;&#x50CF;">&#x4E0B;&#x8F7D;gitbook&#x7684;docker&#x955C;&#x50CF;</h2>
 <p>&#x4F7F;&#x7528;<code>docker search gitbook</code>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x5F88;&#x591A;gitbook&#x7684;&#x666F;&#x8C61;&#x3002;
 &#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9009;&#x53D6;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x6267;&#x884C;<code>docker pull</code>&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x3002;
@@ -293,9 +292,11 @@ $ git push <span class="hljs-_">-f</span>
 </code></pre>
 <p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#xFF0C;pull&#x4E0B;&#x6765;&#x4E4B;&#x540E;&#x6709;&#x51B2;&#x7A81;&#xFF0C;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#x4E4B;&#x540E;&#x518D;&#x6B21;git push&#x5373;&#x53EF;&#x3002;</p>
 <h2 id="&#x5BF9;&#x5916;&#x53D1;&#x5E03;&#x4F60;&#x7684;&#x535A;&#x5BA2;">&#x5BF9;&#x5916;&#x53D1;&#x5E03;&#x4F60;&#x7684;&#x535A;&#x5BA2;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x672C;&#x5730;&#x4E66;&#x5199;&#x597D;&#x6211;&#x4EEC;&#x7684;&#x535A;&#x5BA2;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4EFD;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x4E24;&#x4E2A;&#x5730;&#x65B9;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#x3002;</p>
 <h3 id="&#x4F7F;&#x7528;github&#x53D1;&#x5E03;">&#x4F7F;&#x7528;github&#x53D1;&#x5E03;</h3>
-<p>GitHub Pages &#x662F; GitHub &#x63D0;&#x4F9B;&#x7684;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#x3002;GitHub &#x4E0A;&#x7684;&#x6BCF;&#x4E2A;&#x4ED3;&#x5E93;&#x90FD;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x4E00;&#x4E2A; GitHub Pages&#xFF0C;&#x5BF9;&#x5E94;&#x7684; URL &#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-bas">https://&lt;username&gt;.github.io/&lt;repository&gt;/
+<blockquote>
+<p> GitHub Pages &#x662F; GitHub &#x63D0;&#x4F9B;&#x7684;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#x3002;GitHub &#x4E0A;&#x7684;&#x6BCF;&#x4E2A;&#x4ED3;&#x5E93;&#x90FD;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x4E00;&#x4E2A; GitHub Pages&#xFF0C;&#x5BF9;&#x5E94;&#x7684; URL &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash">https://&lt;username&gt;.github.io/&lt;repository&gt;/
 </code></pre>
 <p>GitHub Pages &#x7684;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x652F;&#x6301;&#x4E0B;&#x9762; 3 &#x4E2A;&#x6765;&#x6E90;&#xFF1A;</p>
 <ul>
@@ -303,15 +304,32 @@ $ git push <span class="hljs-_">-f</span>
 <li>master&#x5206;&#x652F;&#x7684;/docs&#x76EE;&#x5F55;</li>
 <li>gh-pages&#x5206;&#x652F;</li>
 </ul>
-<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528;./docs&#x76EE;&#x5F55;&#x6765;&#x5B58;&#x653E;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;&#x4FEE;&#x6539;github&#x4ED3;&#x5E93;&#x7684;&#x914D;&#x7F6E;&#xFF0C;</p>
+</blockquote>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528;./docs&#x76EE;&#x5F55;&#x6765;&#x5B58;&#x653E;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;</p>
 <pre><code class="lang-bash"><span class="hljs-comment"># &#x672C;&#x5730;&#x6784;&#x5EFA;&#x9759;&#x6001;&#x7F51;&#x9875;</span>
 $ gitbook build ./ ./docs
 
 <span class="hljs-comment"># &#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</span>
 $ git push origin master
 </code></pre>
+<p>&#x4FEE;&#x6539;github&#x4ED3;&#x5E93;&#x7684;&#x914D;&#x7F6E;,&#x9009;&#x62E9; <code>master/branch /docs folder</code>&#x3002;</p>
+<p><img src="&#x672C;&#x5730;&#x4F7F;&#x7528;docker&#x642D;&#x5EFA;gitbook&#x5F00;&#x53D1;&#x73AF;&#x5883;.assets/image-20200405233733199.png" alt="image-20200405233733199"></p>
+<p>&#x67E5;&#x770B;&#x751F;&#x6210;&#x597D;&#x7684;&#x9875;&#x9762;&#xFF1A;<a href="https://zzw520.github.io/develop_experience/" target="_blank">https://zzw520.github.io/develop_experience/</a></p>
 <h3 id="&#x4F7F;&#x7528;gitbook&#x53D1;&#x5E03;">&#x4F7F;&#x7528;gitbook&#x53D1;&#x5E03;</h3>
 <p><a href="https://www.gitbook.com" target="_blank">gitbook.com</a>&#x662F;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x7B14;&#x8BB0;&#x6258;&#x7BA1;&#x7684;&#x5728;&#x7EBF;&#x5E73;&#x53F0;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5C06;github&#x7684;&#x7B14;&#x8BB0;&#x9879;&#x76EE;&#x540C;&#x6B65;&#x5230;gitbook.com&#x4E2D;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x662F;&#x672C;&#x5730;&#x53EA;&#x9700;&#x8981;&#x63A8;&#x9001;&#x5230;github&#x4E2D;&#xFF0C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x5230;gitbook.com&#x4E2D;&#x3002;</p>
+<p>&#x5728;gitbook&#x521B;&#x5EFA;space</p>
+<p><img src="&#x672C;&#x5730;&#x4F7F;&#x7528;docker&#x642D;&#x5EFA;gitbook&#x5F00;&#x53D1;&#x73AF;&#x5883;.assets/image-20200405235041766.png" alt="image-20200405235041766"></p>
+<p>&#x540C;&#x6B65;github&#x7684;&#x9879;&#x76EE;</p>
+<p><img src="&#x672C;&#x5730;&#x4F7F;&#x7528;docker&#x642D;&#x5EFA;gitbook&#x5F00;&#x53D1;&#x73AF;&#x5883;.assets/image-20200405235140609.png" alt="image-20200405235140609"></p>
+<p>&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x7684;&#x9879;&#x76EE;</p>
+<p><img src="&#x672C;&#x5730;&#x4F7F;&#x7528;docker&#x642D;&#x5EFA;gitbook&#x5F00;&#x53D1;&#x73AF;&#x5883;.assets/image-20200405235220409.png" alt="image-20200405235220409"></p>
+<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x672C;&#x5730;&#x6784;&#x5EFA;&#x9759;&#x6001;&#x7F51;&#x9875;</span>
+$ gitbook build
+
+<span class="hljs-comment">#&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</span>
+$ git push origin master
+</code></pre>
 
                                 
                                 </section>
@@ -347,7 +365,7 @@ $ git push origin master
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"本地使用docker搭建gitbook开发环境","level":"1.2.1","depth":2,"previous":{"title":"gitbook","level":"1.2","depth":1,"ref":"","articles":[{"title":"本地使用docker搭建gitbook开发环境","level":"1.2.1","depth":2,"path":"gitbook/本地使用docker搭建gitbook开发环境.md","ref":"gitbook/本地使用docker搭建gitbook开发环境.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/本地使用docker搭建gitbook开发环境.md","mtime":"2020-04-05T15:34:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-05T15:35:25.792Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"本地使用docker搭建gitbook开发环境","level":"1.2.1","depth":2,"previous":{"title":"gitbook","level":"1.2","depth":1,"ref":"","articles":[{"title":"本地使用docker搭建gitbook开发环境","level":"1.2.1","depth":2,"path":"gitbook/本地使用docker搭建gitbook开发环境.md","ref":"gitbook/本地使用docker搭建gitbook开发环境.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/本地使用docker搭建gitbook开发环境.md","mtime":"2020-04-05T15:53:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-05T15:54:41.665Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

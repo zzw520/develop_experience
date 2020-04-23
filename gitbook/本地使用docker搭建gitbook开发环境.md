@@ -1,6 +1,6 @@
 # 本地使用docker搭建gitbook开发环境
 
-
+gitbook是一个nodejs的工具，用来制作精美的电子书。
 
 ## 下载gitbook的docker镜像
 
@@ -72,8 +72,14 @@ $ docker run --rm -v "$PWD:/gitbook" -p 4000:4000 billryan/gitbook gitbook build
 Error: ENOENT: no such file or directory, stat '/gitbook/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js'
 ```
 
+#### 错误原因
+
 是gitbook的一个bug(Version:3.2.3),解决方法如下，找到对应的文件，
 https://blog.csdn.net/weixin_44266650/article/details/89708421
+
+#### 修改后的dockerfile
+
+
 
 ### 修改.zshrc，创建别名
 
@@ -180,22 +186,29 @@ $ gitbook build ./ ./docs
 $ git push origin master
 ```
 
+#### 修改github仓库的配置
+
 修改github仓库的配置,选择 `master/branch /docs folder`。
 
 ![image-20200405233733199](本地使用docker搭建gitbook开发环境.assets/image-20200405233733199.png)
 
+#### 查看生成好的页面
+
 查看生成好的页面：https://zzw520.github.io/develop_experience/
+
+![image-20200417163733112](本地使用docker搭建gitbook开发环境.assets/image-20200417163733112.png)
+
 
 
 ### 使用gitbook发布
 
 [gitbook.com](https://www.gitbook.com)是官方提供的笔记托管的在线平台，我们可以选择将github的笔记项目同步到gitbook.com中。这样的好处是本地只需要推送到github中，就会自动更新到gitbook.com中。
 
-在gitbook创建space
+#### 在gitbook创建space
 
 ![image-20200405235041766](本地使用docker搭建gitbook开发环境.assets/image-20200405235041766.png)
 
-同步github的项目
+#### 同步github的项目
 
 ![image-20200405235140609](本地使用docker搭建gitbook开发环境.assets/image-20200405235140609.png)
 
@@ -212,6 +225,12 @@ $ gitbook build
 #推送到远程仓库
 $ git push origin master
 ```
+
+#### 查看生成好的页面
+
+查看生成好的页面：https://1547730499.gitbook.io/develop-experience/
+
+![image-20200417164035244](本地使用docker搭建gitbook开发环境.assets/image-20200417164035244.png)
 
 
 
